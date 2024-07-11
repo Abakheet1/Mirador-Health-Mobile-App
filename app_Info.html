@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Information</title>
+    <style>
+        body {
+            background-color: #25B9C0;
+            color: #E9F8F9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mirador Health Mobile App Information</h1>
+    <p>App Version: <span id="appVersion">1.0</span></p>
+    <p>Current Date: <span id="currentDate"></span></p>
+    <script>
+        // Set the app version
+        document.getElementById('appVersion').textContent = '1.1.0';
+        // Set the current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
