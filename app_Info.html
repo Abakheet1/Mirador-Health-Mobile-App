@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Information</title>
+    <title>Mirador Insight Mobile App Information</title>
     <style>
         body {
             background-color: #25B9C0;
@@ -15,14 +15,20 @@
     </style>
 </head>
 <body>
-    <h1>Mirador Health Mobile App Information</h1>
-    <p>App Version: <span id="appVersion">1.0</span></p>
-    <p>Current Date: <span id="currentDate"></span></p>
+    <h1>Mirador Insight Mobile App Information</h1>
+    <p>App Version: <span id="appVersion">Loading...</span></p>
+    <p>Build Date: <span id="buildDate">Loading...</span></p>
     <script>
-        // Set the app version
-        document.getElementById('appVersion').textContent = '1.1.0';
-        // Set the current date
-        document.getElementById('currentDate').textContent = new Date().toLocaleDateString();
+        // Function to get URL parameters
+        function getURLParameter(name) {
+            return new URLSearchParams(window.location.search).get(name);
+        }
+        // Get the app version and build date from the URL parameters
+        const appVersion = getURLParameter('version');
+        const buildDate = getURLParameter('Build_Date');
+        // Set the app version and build date in the HTML
+        document.getElementById('App Version').textContent = appVersion ? appVersion : 'Unknown';
+        document.getElementById('Build Date').textContent = buildDate ? buildDate : 'Unknown';
     </script>
 </body>
 </html>
