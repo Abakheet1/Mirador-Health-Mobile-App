@@ -16,19 +16,19 @@
 </head>
 <body>
     <h1>Mirador Insight Mobile App Information</h1>
-    <p>App Version: <span id="appVersion">Loading...</span></p>
-    <p>Build Date: <span id="buildDate">Loading...</span></p>
+    <p>App Version: <span id="App_Version">Loading...</span></p>
+    <p>Build Date: <span id="Build_Date">Loading...</span></p>
     <script>
         // Function to get URL parameters
         function getURLParameter(name) {
             return new URLSearchParams(window.location.search).get(name);
         }
-        // Get the app version and build date from the URL parameters
-        const appVersion = getURLParameter('version');
+
+        const appVersion = getURLParameter('App_Version');
         const buildDate = getURLParameter('Build_Date');
-        // Set the app version and build date in the HTML
-        document.getElementById('App_Version').textContent = App_Version ? App_Version : 'Unknown';
-        document.getElementById('Build_Date').textContent = Build_Date ? Build_Date : 'Unknown';
+
+        document.getElementById('App_Version').textContent = appVersion ? appVersion : 'Unknown';
+        document.getElementById('Build_Date').textContent = buildDate ? buildDate : 'Unknown';
     </script>
 </body>
 </html>
