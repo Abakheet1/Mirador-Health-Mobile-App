@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirador Insights App Information</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .logo {
+            width: 100px; 
+            margin-bottom: 20px;
+        }
+        .title {
+            font-size: 2em;
+            line-height: 1em;
+        }
+    </style>
+</head>
+<body>
+    <img src="Mirador_icon.png" alt="Logo" class="logo">
+    <h1 class="title">Mirador Insights</h1>
+    <h1 class="title">App Information</h1>
+    <p>App Version: <span id="app-version">Loading...</span></p>
+    <p>Build Date: <span id="build-date">Loading...</span></p>
+    <script>
+
+            function getURLParameter(name) {
+            return new URLSearchParams(window.location.search).get(name);
+        }
+
+        const appVersion = getURLParameter('app-version');
+        const buildDate = getURLParameter('build-date');
+
+        document.getElementById('app-version').textContent = appVersion ? appVersion : 'Unknown';
+        document.getElementById('build-date').textContent = buildDate ? buildDate : 'Unknown';
+    </script>
+</body>
+</html>
