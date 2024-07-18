@@ -26,7 +26,8 @@
         .back-button {
             position: absolute;
             bottom: 20px;
-            left: 20px;
+            left: 50%;
+            transform: translateX(-50%);
             padding: 10px 20px;
             background-color: #E9F8F9;
             color: #25B9C0;
@@ -38,14 +39,16 @@
     </style>
 </head>
 <body>
-    <img src="Mirador_icon.png" alt="Logo" class="logo">
+    <a href="https://dev-admin.miradorhealth.com/">
+        <img src="Mirador_icon.png" alt="Logo" class="logo">
+    </a>
     <h1 class="title">Mirador Insights</h1>
     <h1 class="title">App Information</h1>
     <p>App Version: <span id="app-version">Loading...</span></p>
     <p>Build Date: <span id="build-date">Loading...</span></p>
     <button class="back-button" onclick="window.history.back();">Go Back</button>
     <script>
-            function getURLParameter(name) {
+        function getURLParameter(name) {
             return new URLSearchParams(window.location.search).get(name);
         }
 
